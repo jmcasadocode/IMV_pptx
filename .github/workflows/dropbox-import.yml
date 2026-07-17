@@ -1,0 +1,32 @@
+name: dropbox-import
+on:
+  push:
+    paths:
+      - manifest.json
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download files
+        run: |
+          python3 - <<'EOF'
+          import json, subprocess
+          with open("manifest.json") as f:
+              entries = json.load(f)
+          for e in entries:
+              subprocess.run(
+                  ["curl", "-sSL", "--fail", "--create-dirs", "-o", e["path"], e["url"]],
+                  check=True,
+              )
+          EOF
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -q manifest.json
+          git add -A
+          git commit -m "Update files from Dropbox"
+          git push
