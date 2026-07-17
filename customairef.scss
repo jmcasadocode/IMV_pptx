@@ -1,0 +1,806 @@
+/*-- scss:defaults --*/
+// Colores base
+$burgundy-dark: #83082A;
+$burgundy-light: #9b0834;
+$burgundy-accent: #83082A;
+$cream: #FFFFFF;
+$text-dark: #2C1810;
+$background-light: #FFFFFF;
+$pink: #eec1c6;
+$eclipse: #404040;
+$light-grey: #cccdcf;
+
+// Variables derivadas
+$primary: $burgundy-dark;
+$body-bg: $background-light;
+$body-color: $text-dark;
+$headings-color: $burgundy-dark;
+$link-color: $burgundy-accent;
+
+// Tipografía
+$font-family-sans-serif: 'Century Gothic', sans-serif;
+$headings-font-family: $font-family-sans-serif;
+$font-size-base: 1.1rem;
+$line-height-base: 1.7;
+
+/*-- scss:rules --*/
+
+// Estilo base
+body {
+    background-color: $body-bg;
+    color: $body-color;
+    font-family: $font-family-sans-serif;
+    line-height: $line-height-base;
+}
+
+// Encabezados con estilo moderno
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+    color: $headings-color;
+    letter-spacing: -0.02em;
+    font-weight:bold !important;
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid rgba($burgundy-dark, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color:$burgundy-light;
+    border-bottom: 3px solid $burgundy-dark !important;
+}
+
+h3 {
+    color: $burgundy-light !important;
+    margin-top: 1em !important;
+    text-transform: uppercase;
+    font-weight: normal !important;
+}
+
+.text-fuente_nota{
+  font-size: 0.7rem;
+  color: #404040;
+  margin-top: 0.1em;
+  text-align: left !important;
+}
+
+.txt-pie{
+  color: #83082A;
+  font-size: 0.8rem;
+}
+
+// ====================================================
+// Bullets personalizados — color AIReF
+// ====================================================
+
+// Estilo base para todas las listas
+ul {
+  list-style-position: outside;
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+// 🔹 Bullets normales (círculos)
+ul li::marker { color: $primary;}
+
+// Cuadrados nativos
+ul.square {
+  list-style-type: square !important;
+  li::marker {color: $primary;}
+}
+
+// Listas con icono manual (flecha/check/estrella)
+ul.arrow, ul.check, ul.star {
+  list-style: none;
+  padding-left: 1.4em;   // sangría para que quepa el icono
+}
+
+ul.arrow li, ul.check li, ul.star li {
+  position: relative;
+}
+
+ul.arrow li::before,
+ul.check li::before,
+ul.star  li::before {
+  position: absolute;
+  left: -1.4em;
+  top: 0;
+  color: $primary;
+  font-weight: 700;
+}
+
+ul.arrow li::before { content: "➤"; }
+ul.check li::before { content: "✔"; }
+ul.star  li::before { content: "★"; font-weight: 400; }
+
+// Bullets de segundo nivel
+ul ul { padding-left: 1.2em; }
+ul ul li::marker { color: lighten($primary, 20%); }
+
+ul ul ul li::marker { color: lighten($primary, 40%);}
+
+
+
+// Links elegantes
+a {
+    color: $link-color;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        color: lighten($burgundy-accent, 15%);
+        border-bottom-color: currentColor;
+    }
+}
+
+// Tablas refinadas
+table {
+    width: 100%;
+    margin: 2em 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    
+    thead {
+        background: linear-gradient(45deg, $burgundy-dark, lighten($burgundy-dark, 5%));
+        color: $cream;
+        
+        th {
+            padding: 1em;
+            font-weight: 600;
+            border: none;
+        }
+    }
+    
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: rgba($burgundy-dark, 0.02);
+            }
+            
+            &:hover {
+                background-color: rgba($burgundy-dark, 0.04);
+            }
+        }
+        
+        td {
+            padding: 1em;
+            border-bottom: 1px solid rgba($burgundy-dark, 0.1);
+        }
+    }
+}
+
+// Código con estilo
+pre {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    border: 1px solid rgba($burgundy-dark, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+code {
+    color: $burgundy-dark;
+    background: rgba($burgundy-dark, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+}
+
+// Panel-tabset moderno
+.panel-tabset {
+    margin: 2em 0;
+    
+    .nav-tabs {
+        border-bottom: 2px solid rgba($burgundy-dark, 0.1);
+        gap: 0.5em;
+        
+        .nav-item {
+            margin-bottom: -2px;
+        }
+        
+        .nav-link {
+            border: none;
+            color: $text-dark;
+            padding: 0.8em 1.2em;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            
+            &.active {
+                color: $burgundy-dark;
+                border-bottom: 2px solid $burgundy-dark;
+            }
+            
+            &:hover:not(.active) {
+                color: lighten($burgundy-dark, 20%);
+                border-bottom: 2px solid lighten($burgundy-dark, 20%);
+            }
+        }
+    }
+    
+    .tab-content {
+        padding: 1.5em 0;
+    }
+}
+
+// Callouts elegantes
+div.callout {
+    margin: 2em 0;
+    padding: 1.5em;
+    border-left: 4px solid $burgundy-dark;
+    background-color: rgba($burgundy-dark, 0.02);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    
+    .callout-title {
+        color: $burgundy-dark;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+}
+
+// TOC refinado
+#TOC {
+    border-left: 1px solid rgba($burgundy-dark, 0.1);
+    padding-left: 1.5em;
+    
+    .nav {
+        a {
+            color: $text-dark;
+            padding: 0.4em 0;
+            font-size: 0.9em;
+            
+            &:hover {
+                color: $burgundy-dark;
+                text-decoration: none;
+            }
+            
+            &.active {
+                color: $burgundy-dark;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+// Figuras e imágenes
+
+iframe[data-src] {
+  max-width: 100%;
+  width: 100%;
+  height: 80%;
+  border: none;
+  overflow: hidden;
+}
+
+.heatmap-iframe-wrap {
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+}
+
+.heatmap-iframe {
+  width: 125%;
+  height: 625px;
+  border: 0;
+  overflow: hidden;
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+
+figure {
+    margin: 2em 0;
+    
+    img {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    figcaption {
+        margin-top: 0.8em;
+        color: lighten($text-dark, 20%);
+        font-size: 0.9em;
+        text-align: center;
+    }
+}
+
+/* Ocultar número de diapositiva solo en la portada */
+.no-slide-number .slide-number {
+  display: none !important;
+}
+
+// TIPOS DE DIAPOSITIVA
+
+.diapositiva-titulo {
+    background-image: linear-gradient(to bottom,  $background-light 40%, $light-grey 0%);
+    background-color: transparent;
+    padding-top: 20vh  !important;
+    color: $burgundy-dark;
+    text-align: center;
+    height: 30%;
+    font-weight: bold !important;
+  }
+
+   .diapositiva-titulo h1 {
+    background:none !important; /* Remove background from h1 */
+    position: relative !important;
+    top: 3em !important;
+    margin: 0 !important;
+    padding: 0 !important; /* Quitar relleno si aplica */
+    letter-spacing: 0 !important;
+    font-weight: 0 !important;
+    border: none !important; /* Asegurar que no haya bordes */
+    box-shadow: none !important; /* Remover posibles sombras */
+  }
+
+  .reveal .slide-number > a[href*='diapositiva-titulo'] {
+    display: none;
+  }
+  
+.reveal .slides section.diapositiva-titulo + .slide-number {
+    display: none !important;
+  }
+
+.diapositiva-titulo-seccion {
+    background-color: $light-grey !important;
+
+}
+
+
+.diapositiva-titulo-seccion h1,
+.diapositiva-titulo-seccion h2{
+    background-color: transparent !important;
+    color: $headings-color !important;
+    font-weight: normal !important;
+    //padding-bottom:2cm !important;
+    margin: 0 auto !important;
+    padding: 0.5em 0 !important;
+    box-shadow: none !important;
+}
+
+@media print {
+    .reveal .slides section.diapositiva-titulo-seccion + .slide-footer {
+      display: none !important;
+    }
+  }
+  
+
+.reveal .slides section.diapositiva-titulo-seccion + .slide-number {
+    display: none !important;
+  }
+  
+.diapositiva-titulo-indice {
+    background-color: $light-grey !important;
+
+}
+.diapositiva-titulo-indice h1{
+    color: $headings-color !important;
+    font-weight: normal !important;
+    padding-bottom:2cm !important;
+}
+
+.reveal .slides section.diapositiva-titulo-indice + .slide-number {
+    display: none !important;
+  }
+  
+.diapositiva-imagenes{
+    margin-top: 1em !important;
+}
+
+
+  .diapositiva-imagenes h2 {
+    margin-bottom: 2vh !important;
+}
+
+.diapositiva-imagenes h3 {
+    color: $burgundy-light !important;
+    margin-top: 1em !important;
+    text-transform: uppercase;
+    font-weight: normal !important;
+}
+
+.diapositiva-imagenes h4 { /* Para texto arriba de las imágenes (en caja pero sin centrar)*/
+    display: block !important;
+    border: 2px solid $primary !important;
+    color: $text-dark !important;
+    font-weight: normal !important;
+    width: 100% !important; /* Ajusta el ancho para dejar espacio en los lados */
+    box-sizing: border-box !important;
+    padding: 2px;
+}
+
+.diapositiva-imagenes h5 { /* Para texto debajo de las imágenes (centrado y en caja) */
+    display: block !important;
+    border: 2px solid $primary !important;
+    font-weight: normal !important;
+    width: 100% !important; /* Ajusta el ancho para dejar espacio en los lados */
+    box-sizing: border-box !important;
+    margin: 0 auto !important; /* Centra el elemento dentro del contenedor */
+    padding: 2px;
+text-align: center !important;
+color: $text-dark !important;
+}
+
+.diapositiva-imagenes ul {
+    display: block !important;
+    border: 2px solid $primary !important;
+    font-weight: normal !important;
+    width: 100% !important; /* Ajusta el ancho para dejar espacio en los lados */
+    box-sizing: border-box !important;
+    margin: 0 auto !important; /* Centra el elemento dentro del contenedor */
+    padding: -2 px
+}
+
+
+.imglogoslide1 {
+    width:60% !important;
+    height:auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+    top: -10em !important;
+}
+.imglogoslide_en {
+    width:auto !important;
+    height:auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+    top: -10em !important;
+}
+.caption {
+    color: #A9A9A9;
+    font-size: $font-size-base*.8;
+}
+
+img {
+    align-content:center !important;
+    max-width: 100% !important;
+    max-height: 80% !important;
+}
+
+.diapositiva-columnas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Asegura espacio entre columnas */
+  position: relative; /* Necesario para posicionar la flecha */
+}
+
+.columncaja1, .columncaja2 {
+  gap: 1em !important;
+ padding: 2em !important;
+}
+
+.columncaja1 p, .columncaja2 p {
+  line-height: 1.5 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 80%;
+  padding: 1em !important;
+  border-radius: 0.5em !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 1em !important;
+  text-align: left !important;
+}
+
+/* Estilo específico para las cajas */
+.columncaja1 p {
+  background-color: $burgundy-dark !important;
+  color: white !important;
+}
+
+.columncaja2 p {
+  background-color: $light-grey !important;
+  color: $eclipse !important;
+}
+
+section.diapositiva-columnas.present::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 47%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent; /* Borde superior del triángulo */
+    border-bottom: 100px solid transparent; /* Borde inferior del triángulo */
+    border-left: 50px solid #eec1c6; /* Color del triángulo */
+    z-index: 10; /* Asegurar que esté encima */
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.panel-tabset li a {
+    color: #b94a67 !important; /* Cambia $burgundy-light por el color adecuado */
+    text-transform: uppercase;
+    font-weight: normal !important;
+    text-decoration: none; /* Para eliminar subrayado, si lo hubiera */
+    font-size: .85em !important;
+}
+
+.svg-container {
+    width: 50vw !important;
+    height: 55vh !important;
+}
+
+/* Contraportada */
+.diapositiva-final {
+  background-color: $light-grey;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+ 
+  // Hack: asegura que no haya padding lateral de Reveal.js
+  .slide-background-content,
+  section {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+ 
+  h2 {
+    border-bottom: none !important;
+  }
+ 
+  img.logo-final {
+    width: 180px !important;
+    height: auto !important;
+    margin-top: 12rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+ 
+  .info-final {
+    font-size: 0.9rem;
+    color: black;
+    line-height: 1.4;
+    max-width: 90%;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+ 
+    p {
+      margin: 0 !important;
+      text-align: center !important;
+    }
+ 
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+ 
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.reveal .slide-background .diapositiva-final {
+    background-color: $light-grey;
+}
+
+.evaluaciones-table {
+  width: 100%;
+  border-collapse: separate !important;  /* importante para que funcione border-spacing */
+  border-spacing: 10px 10px !important; /* 👈 espacio horizontal entre columnas y vertical entre filas */
+  width: 100%;
+  border: none !important;                /* sin borde en la tabla */
+  outline: none !important;               /* elimina contorno residual */
+  /* background-color: white;   /* 👈 mismo color que el fondo */
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.evaluaciones-table td {
+  background-color: #F2F2F2;
+  padding: 20px 20px;
+  height: 40px;        /* o min-height */
+  vertical-align: middle;
+  border-spacing: 0 40px;      /* separación vertical entre filas (15px ajustable) */
+  border: none !important;                /* sin borde en la tabla */
+  outline: none !important;               /* elimina contorno residual */
+  background-clip: padding-box; /* 👈 evita “línea” al juntar fondos */
+  box-shadow: none !important;
+  /* background: transparent !important;*/
+  font-weight: bold;
+}
+
+.evaluaciones-titulo {
+  background-color: #83082A !important;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-left: 100px;
+  /* border: 20px solid white;    /* borde grueso blanco */
+  border: none;                /* sin borde en celdas */
+}
+
+.table-hallazgos-titulo {
+  background-color: #333F4F !important;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-left: 100px;
+  /* border: 20px solid white;    /* borde grueso blanco */
+  border: none;                /* sin borde en celdas */
+}
+
+/* 🔴 Número circular */
+.evaluaciones-numero {
+  background-color: #83082A !important;
+  color: white !important;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none !important;
+}
+
+
+.contenido-table {
+  width: 100%;
+  border-collapse: separate !important;  /* importante para que funcione border-spacing */
+  border-spacing: 0 30px !important; /* 👈 espacio vertical entre filas */
+  width: 100%;
+  border: none !important;                /* sin borde en la tabla */
+  outline: none !important;               /* elimina contorno residual */
+  /* background-color: white;   /* 👈 mismo color que el fondo */
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.contenido-table td {
+  padding: 25px;
+  vertical-align: middle;
+  border-spacing: 0 40px;      /* separación vertical entre filas (15px ajustable) */
+  border: none !important;                /* sin borde en la tabla */
+  outline: none !important;               /* elimina contorno residual */
+  background-clip: padding-box; /* 👈 evita “línea” al juntar fondos */
+  box-shadow: none !important;
+  /* background: transparent !important;*/
+}
+
+.contenido-numero {
+  background-color: #83082A; /* burdeos AIReF */
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
+  border: none;                /* sin borde en celdas */
+}
+
+.contenido-titulo {
+  background-color: #F5F5F5; /* gris claro */
+  color: #404040;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 100px;
+  /* border: 20px solid white;    /* borde grueso blanco */
+  border: none;                /* sin borde en celdas */
+}
+
+.hallazgos-table td {
+  padding: 25px;
+  vertical-align: middle;
+  border-collapse: separate !important;
+  border-spacing: 0 40px !important;      /* separación vertical entre filas (15px ajustable) */
+  border: none !important;                /* sin borde en la tabla */
+  outline: none !important;               /* elimina contorno residual */
+  background-clip: padding-box; /* 👈 evita “línea” al juntar fondos */
+  box-shadow: none !important;
+  /* background: transparent !important;*/
+}
+
+.hallazgos-numero {
+  background-color: #83082A; /* burdeos */
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  
+  width: 80px;
+  height: 80px;        /* igual que el ancho para hacer círculo */
+  line-height: 80px;   /* centra verticalmente el número */
+  
+  border-radius: 50%;  /* convierte el cuadro en un círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+}
+table td.hallazgos-numero {
+  padding: 0 !important;
+}
+td.hallazgos-titulo {
+  background-color: #F9EAEC;  /* gris claro */
+  color: #404040;
+  font-size: 1.05em;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  border: 2px solid #83082A;     /* borde rojo burdeos AIReF */
+  border-radius: 20px;   /* redondea las 4 esquinas */
+
+}
+
+.hallazgos-principios {
+  background-color: #F5F5F5; /* gris claro */
+  color:  #83082A;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 100px;
+  /* border: 20px solid white;    /* borde grueso blanco */
+  border: none;                /* sin borde en celdas */
+  border-radius: 20px;   /* redondea las 4 esquinas */
+}
+
+/* ⚪ Eliminar cualquier sombra, borde o línea por defecto en la tabla */
+.propuestas-table,
+.propuestas-table * {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* ⚪ Configuración general de la tabla */
+.propuestas-table {
+  border-collapse: separate !important;
+  border-spacing: 0 15px !important;  /* separa las filas verticalmente */
+  background-color: transparent !important;
+}
+
+/* Celdas sin bordes ni sombras por defecto */
+.propuestas-table td {
+  padding: 25px;
+  vertical-align: middle;
+  background-color: transparent !important;
+  background-clip: padding-box !important;
+}
+
+/* 🔴 Número circular */
+.propuestas-numero {
+  background-color: #83082A;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  /*width: 80px;
+  height: 80px;*/
+  width: 2.5em; /* tamaño relativo */
+  height: 2.5em; /* tamaño relativo */
+  /*line-height: 80px;*/
+  border-radius: 50%;
+  display: inline-flex; /* en lugar de flex */
+  justify-content: center;
+  align-items: center;
+  border: none !important;
+  /* aspect-ratio: 1 / 1; mantiene proporción cuadrada */
+  margin: auto; /* centra dentro de la celda */
+}

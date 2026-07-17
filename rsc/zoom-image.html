@@ -1,0 +1,31 @@
+<!-- zoom-image.html -->
+<div id="image-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <img src="" id="overlay-img" style="max-width:90vw; max-height:90vh; box-shadow:0 0 20px #000;">
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const overlay = document.getElementById("image-overlay");
+  const overlayImg = document.getElementById("overlay-img");
+
+  window.openImageOverlay = function (src) {
+    overlayImg.src = src;
+    overlay.style.display = "flex";
+  };
+
+  document.querySelectorAll("img.zoomable").forEach(img => {
+    img.addEventListener("click", function () {
+      window.openImageOverlay(this.src);
+    });
+  });
+
+  overlay.addEventListener("click", function () {
+    overlay.style.display = "none";
+  });
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      overlay.style.display = "none";
+    }
+  });
+});
+</script>
