@@ -1,0 +1,363 @@
+---
+pagetitle: "Quinta Opinión Ingreso Mínimo Vital"
+
+format: 
+  revealjs:
+    title-slide: false
+    favicon: rsc/logo2.png
+    include-in-header:
+      text: |
+        <link rel="icon" type="image/png" href="rsc/logo2.png">
+    theme: [default, customairef.scss]
+    toc: false
+    code-fold: true
+    code-tools: true
+    code-link: true
+    incremental: false
+    css: estiloairef.css
+    slide-width: 1920
+    slide-height: 1080
+    # slide-level: 3
+    #embed-resources: true
+    footer: |
+      <span style="font-size: 0.8em; color: #83082A;">5.ª Opinión Ingreso Mínimo Vital</span>
+slide-number: true
+include-before-body: rsc/zoom-image.html
+---
+# <span style="font-size: 0.95em;">Ingreso mínimo vital</span> {.diapositiva-titulo style="background: none; "}
+
+
+<img src="rsc/logo.svg" class="imglogoslide1" />
+
+<div class="text-burgundy" style="margin-top:0em; font-size: 1.6em;">5.ª Opinión </div>
+
+<span class="lugar-fecha-portada" style="margin-top:3em">Madrid, julio de 2026
+</span>
+
+::: {style="text-align: right; margin-top: 0.7em; margin-bottom: 1em"}
+<!-- <span style="font-size: 0.8em;line-height: 0.5; text-align: right;">José María Casado</span> -->
+
+<span style="font-size: 0.8em;line-height: 0.5; text-align: right;">División de Evaluación del Gasto Público de la AIReF</span>
+:::
+
+
+
+## La AIReF da por concluido el ciclo de evaluaciones anuales con esta quinta Opinión {data-menu-title="Ciclo opiniones IMV"}
+
+```{=html}
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
+      <span style="white-space: nowrap;">Es una presentación generosa pero no llega <button type="button" title="Ver grafico" aria-label="Ver grafico"
+            onclick="openImageOverlay('media/g33_generosidad_imv5.png')"
+            style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
+            <svg viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3v18h18"/>
+              <path d="M7 15l4-4 3 3 5-7"/>
+            </svg>
+          </button></span>
+      <ul class="bullets-eclipse" >
+        <li >Se mantiene un non take-up superior al 50%</li>
+        <li>La cobertura es baja en comparativa internacional</li>        
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+        <li>Reforzar las campañas de información y acompañamiento individualizadas para reducir el non take up y mejorar la inclusión de los beneficiarios</li> 
+        <li>Revisar elementos de diseño del IMV a la luz de la comparación europea</li>                   
+      </ul>
+    </div>
+</div>
+
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
+      Problemas de diseño
+      <ul class="bullets-eclipse" >
+        <li>La permanencia en el IMV sigue siendo elevada y es mayor cuanto más alta es la cuantía percibida
+          <button type="button" title="Ver grafico" aria-label="Ver grafico"
+            onclick="openImageOverlay('media/gre1_2a_permanencia_ratio_imv_rg_titulo.png')"
+            style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
+            <svg viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3v18h18"/>
+              <path d="M7 15l4-4 3 3 5-7"/>
+            </svg>
+          </button>
+        </li>
+        <li>El 51 % de los hogares perceptores del IMV continúa experimentando modificaciones en su prestación debido a la revisión de rentas</li>        
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+        <li>Reformulación completa del diseño del incentivo al empleo del IMV</li>
+        <li>Promover fórmulas de verificación automática de los requisitos para percibir la prestación</li> 
+        <li>Concretar los objetivos del IMV en indicadores y niveles claramente definidos, de modo que pueda evaluarse con precisión su grado de alcance</li>            
+      </ul>
+    </div>
+</div>
+
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
+      Debilidades complementariedad con otras prestaciones
+      <ul class="bullets-eclipse" >
+        <li>Rentas mínimas</li>
+        <li>Otras prestaciones</li>        
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+        <li>Continuar la estadística homogénea y comparable de beneficiarios e importes mensuales de los programas de rentas mínimas para monitorizar la complementariedad de estas prestaciones con el IMV</li>    
+        <li>Reforzar la coherencia del IMV con otras prestaciones y las transiciones entre coberturas, especialmente con el subsidio por desempleo de mayores de 52 años</li>    
+
+      </ul>
+    </div>
+</div>
+
+<!-- <div class="caja-gris text-bold" style="margin-top:1em; ">
+  Retomará el desarrollo de nuevas opiniones cuando se aprueben reformas estructurales en el diseño de la prestación, se articulen algunas de las propuestas aquí planteadas o concurran circunstancias extraordinarias cuyo análisis aporte valor a la política y al conjunto de la sociedad
+</div> -->
+```
+
+
+## Complementariedad con rentas mínimas autonómicas {data-menu-title="Complementariedad RRMM"}
+```{=html}
+<p class="grafico-titulo" >Comunidades autónomas en las que han disminuido de forma significativa los beneficiarios de las rentas mínimas desde la aparición del IMV
+</p>
+<img src="media\grafico_re_2_5_imv3_rrmm.svg">
+<p class="text-fuente_nota">Fuente: AIReF a partir de las nóminas de IMV y de rentas mínimas de las comunidades autónomas.</p>
+```
+
+## Complementariedad con resto de prestaciones {data-menu-title="Complementariedad otras prestaciones"}
+```{=html}
+<div class="bloque-grid--2" style="margin-top:1em;">
+  <div class="bloque">
+    <p class="grafico-titulo" >Hogares beneficiarios de IMV que perciben otras prestaciones en el mismo año (%)
+    </p>
+ 
+    <img src="media\g24_hogares_imv_prestaciones_2024.svg">
+    <p class="text-fuente_nota">Fuente: AIReF a partir de los datos de la AEAT.</p>
+  </div>
+
+  <div class="bloque">
+    <p class="grafico-titulo" >Hogares beneficiarios de prestaciones que perciben otras prestaciones en el mismo año sobre el total de hogares beneficiarios del IMV (básico/completo)(%)
+    </p>
+    <img src="media\g19_hogares_prestaciones_hogimv.svg">
+    <p class="text-fuente_nota">Fuente: AIReF a partir de los datos de la AEAT y los expedientes del IMV.</p>
+  </div>  
+</div>
+```
+
+## Mapa de calor {data-menu-title="Heatmap"}
+<p class="grafico-titulo" >Mapa de calor interactivo para comparar el perfil socioeconómico y demográfico de los hogares beneficiarios de prestaciones (%)</p>
+
+<iframe data-src="media/g18_heatmap_imv5.html" scrolling="no" style="width:100%; height:540px"></iframe>
+
+<p class="text-fuente_nota">Fuente: AIReF a partir de los datos de la AEAT y la explotación de los expedientes del IMV.</p>
+
+## Beneficiarios IMV vs. otras prestaciones {data-menu-title="Beneficiarios"}
+
+```{=html}
+<div class="iframe-fs-wrap">
+<iframe
+src="https://prestaciones.imv.airef.es/"
+data-external="1"
+allow="fullscreen"
+allowfullscreen
+style="width:100%; height:580px; border:0; overflow: hidden;">
+</iframe>
+<button class="iframe-fs-btn" title="Pantalla completa" aria-label="Pantalla completa"
+onclick="this.previousElementSibling.requestFullscreen()">
+<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M16 3h3a2 2 0 0 1 2 2v3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/><path d="M8 21H5a2 2 0 0 1-2-2v-3"/></svg>
+</button>
+</div>
+```
+
+## Complementariedad con el subsidio de desempleo: el 16,6% de los beneficiarios del IMV cobran el subsidio por desempleo  {data-menu-title="IMV-Subsidio"}
+```{=html}
+<div class="bloque-grid--2" style="margin-top:1em;">
+  <div class="bloque">
+    <p class="grafico-titulo" >Distribución de los perceptores del subsidio por desempleo (%). Desglose por edad</p>
+    <img src="media\g28_perceptores_subsidio_edad.png">
+    <p class="text-fuente_nota">Fuente: AIReF a partir de la explotación de los expedientes del IMV y de las vidas laborales de los titulares del IMV y la MCVL 2023.</p>
+  </div>
+   <div class="bloque">
+    <p class="grafico-titulo" >Beneficiarios del subsidio en torno al cumplimiento de los 45 años y 52 años entre titulares con IMV (%)</p>
+    <div class="bloque-grid--2">
+         <div class="bloque">
+      <p class="grafico-titulo" >Umbral 45 años</p>
+      <img src="media\rdplot_subs_postIMV_edades_45.png">   
+    </div>      
+         <div class="bloque">
+      <p class="grafico-titulo" >Umbral 52 años</p>
+      <img src="media\rdplot_subs_postIMV_edades_52.png">
+    </div>      
+    </div>
+    <p class="text-fuente_nota">Fuente: AIReF a partir de la explotación de los expedientes del IMV y de las vidas laborales de los titulares del IMV.</p>
+  </div> 
+</div>
+```
+
+## Titulares del IMV que durante los 12 primeros meses cobran simultáneamente el IMV y el subsidio por desempleo  {data-menu-title="IMV+Subsidio"}
+```{=html}
+    <p class="grafico-titulo" >Titulares con subsidio por desempleo durante todo su primer año de IMV  (%). Desglose por edad
+    </p>
+ 
+    <img src="media\g25_titulares_imv_subsidio.svg">
+    <p class="text-fuente_nota">Fuente: AIReF a partir de la explotación de los expedientes del IMV y de las vidas laborales de los titulares del IMV.</p>
+```
+## Comparativa internacional: El IMV es una prestación generosa y ha aumentado su generosidad   {data-menu-title="Comparativa"}
+<p class="grafico-titulo" >Renta garantizada de las prestaciones de último recurso en la UE. Porcentaje sobre renta mediana equivalente</p>
+
+<iframe data-src="media/generosidad_interactivo_comb.html" scrolling="no"></iframe>
+
+<p class="text-fuente_nota">Fuente: AIReF a partir de datos del Tax-Ben de la OCDE.</p>
+
+
+## Comparativa internacional: Cobertura   {data-menu-title="Comparativa"}
+<p class="grafico-titulo" >Porcentaje de cobertura de la pobreza a través de las prestaciones de último recurso en la UE</p>
+
+<iframe data-src="media/cobertura_interactivo_comb.html" scrolling="no"></iframe>
+
+<p class="text-fuente_nota">Fuente: AIReF a partir de datos del Tax-Ben de la OCDE.</p>
+
+
+## La AIReF da por concluido el ciclo de evaluaciones anuales con esta quinta Opinión {data-menu-title="Ciclo opiniones IMV"}
+
+```{=html}
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
+      <span style="white-space: nowrap;">Es una presentación generosa pero no llega <button type="button" title="Ver grafico" aria-label="Ver grafico"
+            onclick="openImageOverlay('media/g33_generosidad_imv5.png')"
+            style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
+            <svg viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3v18h18"/>
+              <path d="M7 15l4-4 3 3 5-7"/>
+            </svg>
+          </button></span>
+      <ul class="bullets-eclipse" >
+        <li >Se mantiene un non take-up superior al 50%</li>
+        <li>La cobertura es baja en comparativa internacional</li>        
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+        <li>Reforzar las campañas de información y acompañamiento individualizadas para reducir el non take up y mejorar la inclusión de los beneficiarios</li> 
+        <li>Revisar elementos de diseño del IMV a la luz de la comparación europea</li>                   
+      </ul>
+    </div>
+</div>
+
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
+      Problemas de diseño
+      <ul class="bullets-eclipse" >
+        <li>La permanencia en el IMV sigue siendo elevada y es mayor cuanto más alta es la cuantía percibida
+          <button type="button" title="Ver grafico" aria-label="Ver grafico"
+            onclick="openImageOverlay('media/gre1_2a_permanencia_ratio_imv_rg.png')"
+            style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
+            <svg viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3v18h18"/>
+              <path d="M7 15l4-4 3 3 5-7"/>
+            </svg>
+          </button>
+        </li>
+        <li>El 51 % de los hogares perceptores del IMV continúa experimentando modificaciones en su prestación debido a la revisión de rentas</li>        
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+        <li>Reformulación completa del diseño del incentivo al empleo del IMV</li>
+        <li>Promover fórmulas de verificación automática de los requisitos para percibir la prestación</li> 
+        <li>Concretar los objetivos del IMV en indicadores y niveles claramente definidos, de modo que pueda evaluarse con precisión su grado de alcance</li>            
+      </ul>
+    </div>
+</div>
+
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
+      Debilidades complementariedad con otras prestaciones
+      <ul class="bullets-eclipse" >
+        <li>Rentas mínimas</li>
+        <li>Otras prestaciones</li>        
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+        <li>Continuar la estadística homogénea y comparable de beneficiarios e importes mensuales de los programas de rentas mínimas para monitorizar la complementariedad de estas prestaciones con el IMV</li>    
+        <li>Reforzar la coherencia del IMV con otras prestaciones y las transiciones entre coberturas, especialmente con el subsidio por desempleo de mayores de 52 años</li>    
+
+      </ul>
+    </div>
+</div>
+
+<div class="caja-gris text-bold" style="margin-top:1em; ">
+  Retomará el desarrollo de nuevas opiniones cuando se aprueben reformas estructurales en el diseño de la prestación, se articulen algunas de las propuestas aquí planteadas o concurran circunstancias extraordinarias cuyo análisis aporte valor a la política y al conjunto de la sociedad
+</div>
+```
+
+## {.diapositiva-final data-menu-title="AIReF contacto"}
+ 
+![](rsc/logo2.png){.logo-final}
+ 
+<div class="info-final">
+ 
+José Abascal, 2-4, 2.ª planta  
+28003 Madrid  
++34 910 100 599  
+[evaluacion@airef.es](mailto:evaluacion@airef.es)  
+[www.airef.es](https://www.airef.es)  
+<br>
+[<i class="fab fa-linkedin"></i> Autoridad Independiente de Responsabilidad Fiscal (AIReF)](https://www.linkedin.com/company/autoridad-independiente-de-responsabilidad-fiscal-airef-/)  
+[<i class="fab fa-x-twitter"></i> @AIReF_es](https://x.com/AIReF_es)
+ 
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function resizePlotlyInIframes(container) {
+    const iframes = container.querySelectorAll("iframe");
+    iframes.forEach(fr => {
+      // Lazy-load: si usas data-src, carga al activar la pestaña
+      if (fr.dataset.src && !fr.src) fr.src = fr.dataset.src;
+
+      const doResize = () => {
+        try {
+          const win = fr.contentWindow;
+          if (!win) return;
+          const gd = win.document.querySelector(".plotly-graph-div");
+          if (gd && win.Plotly) win.Plotly.Plots.resize(gd);
+        } catch (e) {}
+      };
+
+      // Si ya está cargado, redimensiona; si no, espera al load
+      if (fr.contentDocument && fr.contentDocument.readyState === "complete") {
+        setTimeout(doResize, 60);
+      } else {
+        fr.addEventListener("load", () => setTimeout(doResize, 60), { once: true });
+      }
+    });
+  }
+
+  // Resize del tab activo al cargar
+  document.querySelectorAll(".panel-tabset .tab-pane.active").forEach(pane => {
+    resizePlotlyInIframes(pane);
+  });
+
+  // Resize al cambiar de pestaña (Bootstrap / Quarto)
+  document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach(tab => {
+    tab.addEventListener("shown.bs.tab", function (e) {
+      const paneId = e.target.getAttribute("data-bs-target") || e.target.getAttribute("href");
+      const pane = document.querySelector(paneId);
+      if (pane) setTimeout(() => resizePlotlyInIframes(pane), 80);
+    });
+  });
+
+  // Resize al cambiar tamaño de ventana
+  window.addEventListener("resize", () => {
+    document.querySelectorAll(".panel-tabset .tab-pane.active").forEach(pane => {
+      resizePlotlyInIframes(pane);
+    });
+  });
+
+});
+</script>
