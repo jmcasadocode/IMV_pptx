@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heatmap interactivo IMV</title>
+
+<script src="https://cdn.plot.ly/plotly-3.3.1.min.js"></script>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body {
+        background: #ffffff;
+        color: rgb(64, 64, 64);
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    }
+
+    .pagina {
+        width: 100%;
+        max-width: 1900px;
+        margin: 0 auto;
+        padding: 12px;
+    }
+
+    /*
+       En pantallas estrechas se permite desplazamiento horizontal para que
+       las once columnas y las etiquetas sigan siendo legibles.
+    */
+    .contenedor-scroll {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .contenedor-grafico {
+        position: relative;
+        width: 100%;
+        min-width: 760px;
+        height: clamp(650px, 88vh, 930px);
+    }
+
+    #heatmap-imv,
+    #heatmap-imv.plotly-graph-div {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    @media (max-width: 900px) {
+        .pagina {
+            padding: 6px;
+        }
+
+        .contenedor-grafico {
+            height: 730px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .pagina {
+            padding: 0;
+        }
+
+        .contenedor-grafico {
+            width: 760px;
+            height: 700px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<main class="pagina">
+    <div class="contenedor-scroll">
+        <div class="contenedor-grafico">
+            <div>                            <div id="heatmap-imv" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("heatmap-imv")) {                    Plotly.newPlot(                        "heatmap-imv",                        [{"colorbar":{"tickfont":{"color":"rgb(64,64,64)"},"tickprefix":"\u003cb\u003e","ticksuffix":"\u003c\u002fb\u003e","ticktext":["\u003cb\u003e-1,5\u003cb\u003e","\u003cb\u003e-1,0\u003cb\u003e","\u003cb\u003e-0,5\u003cb\u003e","\u003cb\u003e0,0\u003cb\u003e","\u003cb\u003e0,5\u003cb\u003e","\u003cb\u003e1,0\u003cb\u003e","\u003cb\u003e1,5\u003cb\u003e"],"tickvals":{"dtype":"f8","bdata":"AAAAAAAA+L8AAAAAAADwvwAAAAAAAOC\u002fAAAAAAAAAAAAAAAAAADgPwAAAAAAAPA\u002fAAAAAAAA+D8="},"title":{"side":"right","text":"\u003cb\u003e\u003c\u002fb\u003e"}},"colorscale":[[0.0,"#000000"],[0.1,"#404040"],[0.2,"#646363"],[0.32,"#88888A"],[0.42,"#A9A9A9"],[0.49,"#D9D9D9"],[0.5,"#FFFFFF"],[0.51,"#F3D6DA"],[0.6,"#E397A0"],[0.72,"#D46271"],[0.82,"#D00D43"],[0.9,"#83082A"],[0.96,"#5A171F"],[1.0,"#430416"]],"customdata":[[["60,7 años","53,1 años","+7,6 años","Incapacidad permanente","Edad de los adultos del hogar"],["23.945 €","20.379 €","+3.565 €","Incapacidad permanente","Renta neta equivalente"],["79,3%","69,4%","+9,9 pp","Incapacidad permanente","Porcentaje de hogares con vivienda habitual en propiedad"],["174.161 €","122.271 €","+51.890 €","Incapacidad permanente","Patrimonio neto"],["21,3%","28,0%","-6,7 pp","Incapacidad permanente","Hogares unipersonales"],["337.988 habitantes","425.892 habitantes","-87.905 habitantes","Incapacidad permanente","Población del municipio de residencia"],["49,0%","53,0%","-3,9 pp","Incapacidad permanente","Porcentaje de mujeres entre los adultos del hogar"],["2,6%","6,6%","-4,0 pp","Incapacidad permanente","Hogares de dos adultos y un menor"],["6,2%","14,1%","-8,0 pp","Incapacidad permanente","Porcentaje de hogares con algún miembro extranjero"],["0,6%","3,4%","-2,8 pp","Incapacidad permanente","Hogares monoparentales"],["1,7%","7,6%","-6,0 pp","Incapacidad permanente","Hogares de dos adultos y varios menores"]],[["66,0 años","53,1 años","+12,9 años","Pensión contributiva","Edad de los adultos del hogar"],["20.898 €","20.379 €","+519 €","Pensión contributiva","Renta neta equivalente"],["80,9%","69,4%","+11,4 pp","Pensión contributiva","Porcentaje de hogares con vivienda habitual en propiedad"],["199.196 €","122.271 €","+76.925 €","Pensión contributiva","Patrimonio neto"],["31,0%","28,0%","+3,0 pp","Pensión contributiva","Hogares unipersonales"],["407.724 habitantes","425.892 habitantes","-18.168 habitantes","Pensión contributiva","Población del municipio de residencia"],["57,2%","53,0%","+4,2 pp","Pensión contributiva","Porcentaje de mujeres entre los adultos del hogar"],["1,8%","6,6%","-4,8 pp","Pensión contributiva","Hogares de dos adultos y un menor"],["6,7%","14,1%","-7,5 pp","Pensión contributiva","Porcentaje de hogares con algún miembro extranjero"],["0,7%","3,4%","-2,8 pp","Pensión contributiva","Hogares monoparentales"],["1,3%","7,6%","-6,3 pp","Pensión contributiva","Hogares de dos adultos y varios menores"]],[["64,9 años","53,1 años","+11,9 años","Dependencia","Edad de los adultos del hogar"],["20.569 €","20.379 €","+190 €","Dependencia","Renta neta equivalente"],["77,2%","69,4%","+7,8 pp","Dependencia","Porcentaje de hogares con vivienda habitual en propiedad"],["162.745 €","122.271 €","+40.474 €","Dependencia","Patrimonio neto"],["19,9%","28,0%","-8,1 pp","Dependencia","Hogares unipersonales"],["367.453 habitantes","425.892 habitantes","-58.439 habitantes","Dependencia","Población del municipio de residencia"],["59,8%","53,0%","+6,8 pp","Dependencia","Porcentaje de mujeres entre los adultos del hogar"],["3,5%","6,6%","-3,1 pp","Dependencia","Hogares de dos adultos y un menor"],["8,3%","14,1%","-5,8 pp","Dependencia","Porcentaje de hogares con algún miembro extranjero"],["1,8%","3,4%","-1,6 pp","Dependencia","Hogares monoparentales"],["5,4%","7,6%","-2,3 pp","Dependencia","Hogares de dos adultos y varios menores"]],[["60,9 años","53,1 años","+7,8 años","Pensión no contributiva","Edad de los adultos del hogar"],["11.618 €","20.379 €","-8.761 €","Pensión no contributiva","Renta neta equivalente"],["52,7%","69,4%","-16,7 pp","Pensión no contributiva","Porcentaje de hogares con vivienda habitual en propiedad"],["46.891 €","122.271 €","-75.381 €","Pensión no contributiva","Patrimonio neto"],["27,5%","28,0%","-0,5 pp","Pensión no contributiva","Hogares unipersonales"],["346.027 habitantes","425.892 habitantes","-79.865 habitantes","Pensión no contributiva","Población del municipio de residencia"],["56,0%","53,0%","+3,1 pp","Pensión no contributiva","Porcentaje de mujeres entre los adultos del hogar"],["1,9%","6,6%","-4,7 pp","Pensión no contributiva","Hogares de dos adultos y un menor"],["14,1%","14,1%","-0,1 pp","Pensión no contributiva","Porcentaje de hogares con algún miembro extranjero"],["0,5%","3,4%","-2,9 pp","Pensión no contributiva","Hogares monoparentales"],["1,1%","7,6%","-6,5 pp","Pensión no contributiva","Hogares de dos adultos y varios menores"]],[["45,9 años","53,1 años","-7,2 años","Prestación por desempleo","Edad de los adultos del hogar"],["17.104 €","20.379 €","-3.275 €","Prestación por desempleo","Renta neta equivalente"],["61,3%","69,4%","-8,1 pp","Prestación por desempleo","Porcentaje de hogares con vivienda habitual en propiedad"],["64.386 €","122.271 €","-57.885 €","Prestación por desempleo","Patrimonio neto"],["13,4%","28,0%","-14,6 pp","Prestación por desempleo","Hogares unipersonales"],["317.295 habitantes","425.892 habitantes","-108.597 habitantes","Prestación por desempleo","Población del municipio de residencia"],["50,7%","53,0%","-2,2 pp","Prestación por desempleo","Porcentaje de mujeres entre los adultos del hogar"],["8,2%","6,6%","+1,6 pp","Prestación por desempleo","Hogares de dos adultos y un menor"],["20,6%","14,1%","+6,5 pp","Prestación por desempleo","Porcentaje de hogares con algún miembro extranjero"],["3,1%","3,4%","-0,3 pp","Prestación por desempleo","Hogares monoparentales"],["8,8%","7,6%","+1,2 pp","Prestación por desempleo","Hogares de dos adultos y varios menores"]],[["47,4 años","53,1 años","-5,6 años","Rentas mínimas autonómicas","Edad de los adultos del hogar"],["12.241 €","20.379 €","-8.139 €","Rentas mínimas autonómicas","Renta neta equivalente"],["45,2%","69,4%","-24,2 pp","Rentas mínimas autonómicas","Porcentaje de hogares con vivienda habitual en propiedad"],["17.536 €","122.271 €","-104.735 €","Rentas mínimas autonómicas","Patrimonio neto"],["23,4%","28,0%","-4,6 pp","Rentas mínimas autonómicas","Hogares unipersonales"],["214.280 habitantes","425.892 habitantes","-211.613 habitantes","Rentas mínimas autonómicas","Población del municipio de residencia"],["56,0%","53,0%","+3,0 pp","Rentas mínimas autonómicas","Porcentaje de mujeres entre los adultos del hogar"],["6,8%","6,6%","+0,2 pp","Rentas mínimas autonómicas","Hogares de dos adultos y un menor"],["23,3%","14,1%","+9,2 pp","Rentas mínimas autonómicas","Porcentaje de hogares con algún miembro extranjero"],["8,6%","3,4%","+5,2 pp","Rentas mínimas autonómicas","Hogares monoparentales"],["9,4%","7,6%","+1,7 pp","Rentas mínimas autonómicas","Hogares de dos adultos y varios menores"]],[["47,1 años","53,1 años","-6,0 años","Prestaciones familiares","Edad de los adultos del hogar"],["17.866 €","20.379 €","-2.513 €","Prestaciones familiares","Renta neta equivalente"],["63,5%","69,4%","-6,0 pp","Prestaciones familiares","Porcentaje de hogares con vivienda habitual en propiedad"],["82.069 €","122.271 €","-40.202 €","Prestaciones familiares","Patrimonio neto"],["8,8%","28,0%","-19,2 pp","Prestaciones familiares","Hogares unipersonales"],["363.444 habitantes","425.892 habitantes","-62.449 habitantes","Prestaciones familiares","Población del municipio de residencia"],["57,6%","53,0%","+4,7 pp","Prestaciones familiares","Porcentaje de mujeres entre los adultos del hogar"],["8,8%","6,6%","+2,2 pp","Prestaciones familiares","Hogares de dos adultos y un menor"],["15,9%","14,1%","+1,7 pp","Prestaciones familiares","Porcentaje de hogares con algún miembro extranjero"],["8,8%","3,4%","+5,4 pp","Prestaciones familiares","Hogares monoparentales"],["14,7%","7,6%","+7,0 pp","Prestaciones familiares","Hogares de dos adultos y varios menores"]],[["40,3 años","53,1 años","-12,8 años","IMV-CAPI","Edad de los adultos del hogar"],["12.950 €","20.379 €","-7.430 €","IMV-CAPI","Renta neta equivalente"],["55,1%","69,4%","-14,4 pp","IMV-CAPI","Porcentaje de hogares con vivienda habitual en propiedad"],["21.755 €","122.271 €","-100.516 €","IMV-CAPI","Patrimonio neto"],["0,6%","28,0%","-27,4 pp","IMV-CAPI","Hogares unipersonales"],["197.840 habitantes","425.892 habitantes","-228.052 habitantes","IMV-CAPI","Población del municipio de residencia"],["56,9%","53,0%","+3,9 pp","IMV-CAPI","Porcentaje de mujeres entre los adultos del hogar"],["18,8%","6,6%","+12,2 pp","IMV-CAPI","Hogares de dos adultos y un menor"],["27,4%","14,1%","+13,3 pp","IMV-CAPI","Porcentaje de hogares con algún miembro extranjero"],["12,9%","3,4%","+9,4 pp","IMV-CAPI","Hogares monoparentales"],["45,0%","7,6%","+37,4 pp","IMV-CAPI","Hogares de dos adultos y varios menores"]],[["44,9 años","53,1 años","-8,2 años","IMV","Edad de los adultos del hogar"],["8.560 €","20.379 €","-11.819 €","IMV","Renta neta equivalente"],["30,8%","69,4%","-38,6 pp","IMV","Porcentaje de hogares con vivienda habitual en propiedad"],["5.048 €","122.271 €","-117.223 €","IMV","Patrimonio neto"],["25,6%","28,0%","-2,4 pp","IMV","Hogares unipersonales"],["320.825 habitantes","425.892 habitantes","-105.067 habitantes","IMV","Población del municipio de residencia"],["59,9%","53,0%","+6,9 pp","IMV","Porcentaje de mujeres entre los adultos del hogar"],["7,7%","6,6%","+1,1 pp","IMV","Hogares de dos adultos y un menor"],["22,1%","14,1%","+8,0 pp","IMV","Porcentaje de hogares con algún miembro extranjero"],["16,0%","3,4%","+12,6 pp","IMV","Hogares monoparentales"],["15,6%","7,6%","+8,0 pp","IMV","Hogares de dos adultos y varios menores"]]],"hovertemplate":"\u003cb\u003e%{customdata[4]}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003e%{customdata[3]}: %{customdata[0]}\u003cbr\u003eReferencia nacional: %{customdata[1]}\u003cbr\u003eDiferencia: %{customdata[2]}\u003cextra\u003e\u003c\u002fextra\u003e","x":["\u003cb\u003eEdad adultos\u003c\u002fb\u003e","\u003cb\u003eRenta neta equivalente\u003c\u002fb\u003e","\u003cb\u003ePropiedad vivienda\u003c\u002fb\u003e","\u003cb\u003ePatrimonio neto\u003c\u002fb\u003e","\u003cb\u003eHogares unipersonales\u003c\u002fb\u003e","\u003cb\u003ePoblación municipio\u003c\u002fb\u003e","\u003cb\u003eMujeres adultos\u003c\u002fb\u003e","\u003cb\u003eHogares 2A 1M\u003c\u002fb\u003e","\u003cb\u003eHogares con extranjero\u003c\u002fb\u003e","\u003cb\u003eHogares monoparentales\u003c\u002fb\u003e","\u003cb\u003eHogares 2A 2+M\u003c\u002fb\u003e"],"y":["\u003cb\u003eIncapacidad\u003cbr\u003epermanente\u003c\u002fb\u003e","\u003cb\u003ePensión contributiva\u003c\u002fb\u003e","\u003cb\u003eDependencia\u003c\u002fb\u003e","\u003cb\u003ePensión no contributiva\u003c\u002fb\u003e","\u003cb\u003ePrestación\u003cbr\u003epor desempleo\u003c\u002fb\u003e","\u003cb\u003eRentas mínimas\u003c\u002fb\u003e","\u003cb\u003ePrestaciones\u003cbr\u003efamiliares\u003c\u002fb\u003e","\u003cb\u003eIMV-CAPI\u003c\u002fb\u003e","\u003cb\u003eIMV\u003c\u002fb\u003e"],"z":{"dtype":"f8","bdata":"CDuknFg13j\u002fLCHeAitfMP8MkIh2aics\u002fkRNgN\u002fCTxz8jni6DGAXDvzXbql5dGbm\u002fXaHV6idzv7+9oI111MXEv6GO4Kn0Uc2\u002fKflD+aOkw7+s8YjAR7PMvxR0QZ7Zpek\u002fJ1FD3BvKoD\u002fRTx8eFcHPP+MXPTsJetE\u002flEMmQQFZsT+EOBbhFMCUvz\u002f07tmExcA\u002fbdDRiYiLyL\u002f6vSQAxWnLv91TxZYWXMO\u002fsKIORHmTzr\u002fKzLugdJjnP3uoCpltn4g\u002fp8jnNl2mxT+QbXQpCWTCPwtKyVl1Kce\u002fWo7\u002fHpavsL9B38yeuijLP4RM8FVEMMC\u002fNVQYnSRExb+sXlrhUbu2vyphXGBF\u002fLW\u002fWr8VYIo43z+zxV69xLfhv8IY7OEmPte\u002fSA3Ymzkg0b8EgG9CPVeFvzrY7mC8zba\u002fVcVo3vCJuD8EQbq3pmnIvzeFVFycglq\u002fFErTXkxMxL9yAxXAWlbPv2B32wGulty\u002fxYm351x+yr8NBvB5covGv2tbvVhSTcq\u002fy7vqAfPQ1L8FgoRR3gG\u002fv1krlv\u002fptrG\u002f467kfhVNsD+hXWz3\u002fsjHP8x5awXykZG\u002faIuPQp7Mpj\u002fn6Zb803bWvwkvh\u002f6FdeC\u002fY4O\u002fPr7N4L+Yu1zlhcvXv8I\u002fOq+QPbq\u002fOH9VJuM1zr9V8CWe\u002fRK4P8BgHWF2an0\u002f793u\u002ftvZ0D9C\u002f6lduFjSP+DvDUGy2bA\u002fLM5BZTbn17+qdajHMlTEvxa0HCq+iMC\u002fUrMoaGpEwr\u002fudwf8Cmfbv2J7WyCp1LG\u002fqtQuniimwj9V7jOecMW2P+oxGMOfWKk\u002fwk6QXCcD0z90nuvaYufQP\u002fKjbT6mfOm\u002fqFI3QP4M3r+oHy\u002f\u002ffPbTvw5FJoUe1ta\u002f8g\u002fXQZCJ47+7Pe9jWEfQvwBI+YvRIb8\u002f6J\u002fgYkWN3z\u002fhlF5A1GLYP7afrf9KmeA\u002fILGChM2F9j\u002fyJTNij17gv7pbgiHl5ue\u002f2Ls\u002f3qvW6r\u002f6Rzpe3KHavw92KuNWdqu\u002f3pps6tn\u002fvb\u002fXVLNaoqvLP6pQiV1uP6Y\u002f\u002fsnGIAM7zT8MegziRRfmPwa7YduiTNM\u002f","shape":"9, 11"},"zmax":1.5,"zmid":0,"zmin":-1.5,"type":"heatmap"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"tickfont":{"color":"rgb(64,64,64)","size":18},"tickangle":-45,"automargin":true,"fixedrange":false},"yaxis":{"tickfont":{"color":"rgb(64,64,64)","size":18},"ticks":"outside","ticklen":20,"tickcolor":"rgba(0,0,0,0)","automargin":true,"fixedrange":false},"font":{"family":"\"Century Gothic\", CenturyGothic, AppleGothic, sans-serif","size":22,"color":"rgb(64,64,64)"},"margin":{"l":260,"r":70,"t":35,"b":165},"hoverlabel":{"font":{"size":14,"color":"rgb(40,40,40)"},"bgcolor":"white","bordercolor":"rgb(120,120,120)","align":"left"},"autosize":true,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"responsive": true, "displaylogo": false, "scrollZoom": false, "modeBarButtonsToRemove": ["select2d", "lasso2d", "zoom2d", "pan2d", "zoomIn2d", "zoomOut2d", "autoScale2d"], "toImageButtonOptions": {"format": "png", "filename": "heatmap_imv", "height": 1000, "width": 1800, "scale": 2}}                    )                };            </script>        </div>
+        </div>
+    </div>
+</main>
+
+<script>
+(function () {
+    "use strict";
+
+    const grafico = document.getElementById("heatmap-imv");
+    const contenedor = document.querySelector(".contenedor-grafico");
+
+    let ultimoAncho = 0;
+    let animacionPendiente = null;
+
+    function configuracionParaAncho(ancho) {
+        if (ancho < 900) {
+            return {
+                "font.size": 14,
+                "margin.l": 175,
+                "margin.r": 45,
+                "margin.t": 20,
+                "margin.b": 140,
+                "xaxis.tickangle": -60,
+                "xaxis.tickfont.size": 11,
+                "yaxis.tickfont.size": 11,
+                "colorbar.tickfont.size": 11,
+                "colorbar.thickness": 13,
+                "colorbar.len": 0.80
+            };
+        }
+
+        if (ancho < 1300) {
+            return {
+                "font.size": 18,
+                "margin.l": 220,
+                "margin.r": 55,
+                "margin.t": 25,
+                "margin.b": 150,
+                "xaxis.tickangle": -50,
+                "xaxis.tickfont.size": 14,
+                "yaxis.tickfont.size": 14,
+                "colorbar.tickfont.size": 13,
+                "colorbar.thickness": 16,
+                "colorbar.len": 0.84
+            };
+        }
+
+        return {
+            "font.size": 22,
+            "margin.l": 260,
+            "margin.r": 70,
+            "margin.t": 35,
+            "margin.b": 165,
+            "xaxis.tickangle": -45,
+            "xaxis.tickfont.size": 18,
+            "yaxis.tickfont.size": 18,
+            "colorbar.tickfont.size": 16,
+            "colorbar.thickness": 18,
+            "colorbar.len": 0.86
+        };
+    }
+
+    function redimensionar() {
+        const ancho = contenedor.clientWidth;
+
+        if (!ancho || Math.abs(ancho - ultimoAncho) < 1) {
+            return;
+        }
+
+        ultimoAncho = ancho;
+        const cambios = configuracionParaAncho(ancho);
+
+        Plotly.relayout(grafico, cambios)
+            .then(function () {
+                Plotly.Plots.resize(grafico);
+            });
+    }
+
+    function programarRedimension() {
+        if (animacionPendiente !== null) {
+            cancelAnimationFrame(animacionPendiente);
+        }
+
+        animacionPendiente = requestAnimationFrame(function () {
+            animacionPendiente = null;
+            redimensionar();
+        });
+    }
+
+    if ("ResizeObserver" in window) {
+        const observador = new ResizeObserver(programarRedimension);
+        observador.observe(contenedor);
+    }
+
+    window.addEventListener("resize", programarRedimension, {passive: true});
+    programarRedimension();
+})();
+</script>
+</body>
+</html>
