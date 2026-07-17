@@ -42,25 +42,41 @@ include-before-body: rsc/zoom-image.html
 
 
 
-## La AIReF da por concluido el ciclo de evaluaciones anuales con esta quinta Opinión {data-menu-title="Ciclo opiniones IMV"}
+## La AIReF cierra el ciclo de evaluaciones anuales recapitulando hallazgos y propuestas de sus cinco opiniones {data-menu-title="Ciclo opiniones IMV"}
 
 ```{=html}
+<div class="bloque-grid--2" style="margin-top:0.2em; margin-bottom:0.15em; gap:0.6em;">
+  <div class="text-bold text-md" style="background: var(--hawkes-blue); color: var(--cloud-burst); padding: 0.25em 0.7em; border-radius: 0.35em; text-align: center;">Hallazgos</div>
+  <div class="text-bold text-md" style="background: var(--burgundy); color: #fff; padding: 0.25em 0.7em; border-radius: 0.35em; text-align: center;">Propuestas</div>
+</div>
+
 <div class="bloque-grid--2" style="margin-top:0.5em;">
-  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
-      <span style="white-space: nowrap;">Es una presentación generosa pero no llega <button type="button" title="Ver grafico" aria-label="Ver grafico"
+  <div class="caja-flex-hawkes-blue-izquierda" style="margin-top:0; ">
+      <span class="text-lg-plus text-bold">Refuerza la protección frente a la pobreza, pero no llega a la mitad de sus potenciales beneficiarios</span>
+      <ul class="bullets-eclipse text-sm-plus" >
+        <li >El non take-up se mantiene por encima del 50 % en el IMV y del 70 % en el CAPI.
+          <button type="button" title="Ver grafico" aria-label="Ver grafico"
+            onclick="openImageOverlay('media/non_take_up.png')"
+            style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
+            <svg viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3v18h18"/>
+              <path d="M7 15l4-4 3 3 5-7"/>
+            </svg>
+          </button>
+        </li>
+        <li>La cobertura es baja en comparativa internacional
+          <button type="button" title="Ver grafico" aria-label="Ver grafico"
             onclick="openImageOverlay('media/g33_generosidad_imv5.png')"
             style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
             <svg viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M3 3v18h18"/>
               <path d="M7 15l4-4 3 3 5-7"/>
             </svg>
-          </button></span>
-      <ul class="bullets-eclipse" >
-        <li >Se mantiene un non take-up superior al 50%</li>
-        <li>La cobertura es baja en comparativa internacional</li>        
+          </button>
+        </li>        
       </ul>
     </div>
-  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+  <div class="caja-flex-burgundy-izquierda text-sm-plus" style="margin-top:0; ">
       <ul class="bullets-blancos">
         <li>Reforzar las campañas de información y acompañamiento individualizadas para reducir el non take up y mejorar la inclusión de los beneficiarios</li> 
         <li>Revisar elementos de diseño del IMV a la luz de la comparación europea</li>                   
@@ -69,10 +85,10 @@ include-before-body: rsc/zoom-image.html
 </div>
 
 <div class="bloque-grid--2" style="margin-top:0.5em;">
-  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
-      Problemas de diseño
-      <ul class="bullets-eclipse" >
-        <li>La permanencia en el IMV sigue siendo elevada y es mayor cuanto más alta es la cuantía percibida
+  <div class="caja-flex-hawkes-blue-izquierda" style="margin-top:0; ">
+      <span class="text-lg-plus text-bold">Permite compatibilizar prestación y empleo, pero no facilita la salida hacia el trabajo</span>
+      <ul class="bullets-eclipse text-sm-plus" >
+        <li>El 46 % de los hogares permanece en el IMV transcurridos 60 meses
           <button type="button" title="Ver grafico" aria-label="Ver grafico"
             onclick="openImageOverlay('media/gre1_2a_permanencia_ratio_imv_rg_titulo.png')"
             style="margin-left:0.35em; width:1.15em; height:1.15em; border:0; border-radius:50%; background: var(--cloud-burst); color:#fff; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; cursor:pointer; padding:0;">
@@ -82,10 +98,10 @@ include-before-body: rsc/zoom-image.html
             </svg>
           </button>
         </li>
-        <li>El 51 % de los hogares perceptores del IMV continúa experimentando modificaciones en su prestación debido a la revisión de rentas</li>        
+        <li>Efecto negativo sobre el empleo de sus beneficiarios que el incentivo laboral vigente no logra mitigar</li>        
       </ul>
     </div>
-  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+  <div class="caja-flex-burgundy-izquierda text-sm-plus" style="margin-top:0; ">
       <ul class="bullets-blancos">
         <li>Reformulación completa del diseño del incentivo al empleo del IMV</li>
         <li>Promover fórmulas de verificación automática de los requisitos para percibir la prestación</li> 
@@ -95,14 +111,26 @@ include-before-body: rsc/zoom-image.html
 </div>
 
 <div class="bloque-grid--2" style="margin-top:0.5em;">
-  <div class="caja-flex-hawkes-blue-izquierda text-md text-bold" style="margin-top:0; ">
-      Debilidades complementariedad con otras prestaciones
-      <ul class="bullets-eclipse" >
+  <div class="caja-flex-hawkes-blue-izquierda" style="margin-top:0; ">
+      <span class="text-lg-plus text-bold">La tramitación se agiliza, pero las continuas solicitudes de devolución erosionan la confianza de los hogares</span>
+      <ul class="bullets-eclipse text-sm-plus" >
+      </ul>
+    </div>
+  <div class="caja-flex-burgundy-izquierda text-sm-plus" style="margin-top:0; ">
+      <ul class="bullets-blancos">
+      </ul>
+    </div>
+</div>
+
+<div class="bloque-grid--2" style="margin-top:0.5em;">
+  <div class="caja-flex-hawkes-blue-izquierda" style="margin-top:0; ">
+      <span class="text-lg-plus text-bold">Complementa a otras prestaciones del sistema, pero persisten solapamientos que exigen mayor coherencia</span>
+      <ul class="bullets-eclipse text-sm-plus" >
         <li>Rentas mínimas</li>
         <li>Otras prestaciones</li>        
       </ul>
     </div>
-  <div class="caja-flex-burgundy-izquierda text-sm" style="margin-top:0; ">
+  <div class="caja-flex-burgundy-izquierda text-sm-plus" style="margin-top:0; ">
       <ul class="bullets-blancos">
         <li>Continuar la estadística homogénea y comparable de beneficiarios e importes mensuales de los programas de rentas mínimas para monitorizar la complementariedad de estas prestaciones con el IMV</li>    
         <li>Reforzar la coherencia del IMV con otras prestaciones y las transiciones entre coberturas, especialmente con el subsidio por desempleo de mayores de 52 años</li>    
@@ -115,8 +143,6 @@ include-before-body: rsc/zoom-image.html
   Retomará el desarrollo de nuevas opiniones cuando se aprueben reformas estructurales en el diseño de la prestación, se articulen algunas de las propuestas aquí planteadas o concurran circunstancias extraordinarias cuyo análisis aporte valor a la política y al conjunto de la sociedad
 </div> -->
 ```
-
-
 ## Complementariedad con rentas mínimas autonómicas {data-menu-title="Complementariedad RRMM"}
 ```{=html}
 <p class="grafico-titulo" >Comunidades autónomas en las que han disminuido de forma significativa los beneficiarios de las rentas mínimas desde la aparición del IMV
